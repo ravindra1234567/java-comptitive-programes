@@ -5,7 +5,7 @@ import java.math.*;
 import java.util.regex.*;
 
 public class BettingSafest{
-    private static float minGrouth(float arr[]){
+    private static float minGrowth(float arr[]){
         float minG=1000000,d=0,p;
         for(int i=0;i<arr.length;i++){
             if(i+1<arr.length)
@@ -29,13 +29,13 @@ public class BettingSafest{
              float arr[] = new float[5];
             for(int i=0;i<5;i++)
                 arr[i] = scan.nextFloat();
-            minG1 = minGrouth(arr);
+            minG1 = minGrowth(arr);
             String str2 = scan.next();
             for(int i=0;i<5;i++)
                 arr[i] = scan.nextFloat();
-            minG2 = minGrouth(arr);
+            minG2 = minGrowth(arr);
             
-            if(minG1 > minG2 || minG2 <= minG1)
+            if(minG1 >= minG2)
                 System.out.println(str1);
             else
                 System.out.println(str2);
