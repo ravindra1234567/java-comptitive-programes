@@ -9,10 +9,10 @@ class ArrayRightRotation{
 	   // System.arraycopy(arr,0,a,d,length-d);
 	   // System.arraycopy(arr,length-d,a,0,d);
 	   for(int i=0;i<length;i++){
-	       if(k-i>0)
-	            a[i] = arr[(length+i)-k];
+	       if(d-i>0)
+	            a[i] = arr[(length+i)-d];
 	       else
-	            a[i] = arr[i-k];
+	            a[i] = arr[i-d];
 	   }
 	    String s = Arrays.toString(a);
 		    System.out.println(s);

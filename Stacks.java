@@ -1,21 +1,26 @@
 import java.util.*;
 class Stacks{
-    public static void popElement(Stack st){
-        System.out.print(st.pop()+" ");
-    }
     public static void main(String args[]){
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-        Stack s = new Stack();
-        for(int i=0;i<n;i++)
-            s.push(scan.nextInt());
-        
+        int value,element,max=0;
+        Stack<Integer> s = new Stack<Integer>();
         for(int i=0;i<n;i++){
-            // int a = (int)s.pop();
-            // System.out.print(a.getClass().getName()+" ");
-            System.out.print(s.peek()+"  ");
+            value = scan.nextInt();
+            if(value == 1){
+                element = scan.nextInt();
+                if(element > max)
+                    max = element;
+                s.push(element);
+            }
+            if(value == 2){
+                s.pop();
+                max = Collections.max(s);
+            }
+            if(value == 3)
+                System.out.println(max);
+
         }
-        System.out.println("\nsearch = " + s.search(3));
 
     }
 }
