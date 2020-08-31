@@ -6,17 +6,14 @@ public class CalaculateSimilarCharacterString {
         char[] c = str.toCharArray();
         Arrays.sort(c);
         int count=1;
-        // char cc;
         for(int i=0;i<c.length;i++){
-                if(i+1 < c.length)
-                    if(c[i] == c[i+1]){
+                if(i+1 < c.length && c[i] == c[i+1]){
                         count++;
                         continue;
                     }else{
-                        System.out.print(c[i]+""+count);
+                        System.out.print(c[i]+""+count+" ");
                         count=1;
                     }
-            
         }
     }
 }
