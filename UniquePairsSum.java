@@ -15,7 +15,6 @@ class uniquePairsSum{
             }
 
         }
-
         return count;
     }
     public static void main(String args[]){
